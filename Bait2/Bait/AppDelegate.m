@@ -32,6 +32,8 @@
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     
     [[DataSource sharedInstance] launchLocationServices];
+
+    NSLog(@"monitored regions from app delegate: %@", [DataSource sharedInstance].fetchResultItems);
     
     return YES;
 }

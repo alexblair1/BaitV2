@@ -147,13 +147,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRG-T1-AmG">
-                                <rect key="frame" x="0.0" y="64" width="414" height="236"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="336"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="236" id="fQo-gL-Hsj"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fQo-gL-Hsj"/>
+                                    </mask>
+                                </variation>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W8L-w0-H7S">
-                                <rect key="frame" x="0.0" y="300" width="414" height="436"/>
+                                <rect key="frame" x="0.0" y="400" width="414" height="336"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocalResultsCell" textLabel="704-Bi-ZFv" detailTextLabel="vOc-zN-seP" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="a4L-D5-Fcd">
@@ -181,33 +186,65 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="centerX" secondItem="KRG-T1-AmG" secondAttribute="centerX" id="1sN-xP-NL2"/>
                             <constraint firstItem="W8L-w0-H7S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1zI-oA-DdF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KRG-T1-AmG" secondAttribute="bottom" constant="367" id="41G-Is-xJf"/>
+                            <constraint firstItem="KRG-T1-AmG" firstAttribute="top" secondItem="W8L-w0-H7S" secondAttribute="top" constant="-236" id="44o-eW-roF"/>
                             <constraint firstItem="KRG-T1-AmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="5dS-9r-fbw"/>
+                            <constraint firstAttribute="trailing" secondItem="KRG-T1-AmG" secondAttribute="trailing" id="6Vf-6r-uVR"/>
                             <constraint firstItem="W8L-w0-H7S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="7Xt-bC-r3N"/>
                             <constraint firstAttribute="trailing" secondItem="KRG-T1-AmG" secondAttribute="trailing" id="7se-9I-pYc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W8L-w0-H7S" secondAttribute="bottom" id="8EV-eI-k03"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W8L-w0-H7S" secondAttribute="bottom" id="BaL-80-Ybp"/>
+                            <constraint firstAttribute="trailing" secondItem="W8L-w0-H7S" secondAttribute="trailing" id="Gtm-uZ-WgK"/>
                             <constraint firstItem="W8L-w0-H7S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="300" id="Jbc-i7-eFY"/>
                             <constraint firstItem="KRG-T1-AmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LbN-k6-cw6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KRG-T1-AmG" secondAttribute="trailing" constant="-16" id="NNH-Fd-Uud"/>
                             <constraint firstItem="KRG-T1-AmG" firstAttribute="height" secondItem="W8L-w0-H7S" secondAttribute="height" constant="-131" id="Qpj-oC-vBy"/>
                             <constraint firstAttribute="bottom" secondItem="W8L-w0-H7S" secondAttribute="bottom" id="SbW-jQ-FRj"/>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="top" secondItem="KRG-T1-AmG" secondAttribute="top" constant="236" id="XFB-Un-vFe"/>
                             <constraint firstItem="KRG-T1-AmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XON-BT-QgJ"/>
+                            <constraint firstItem="KRG-T1-AmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fcZ-Yr-iWO"/>
                             <constraint firstItem="KRG-T1-AmG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fiD-vB-epN"/>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="bottom" secondItem="KRG-T1-AmG" secondAttribute="bottom" constant="436" id="inG-Ag-98v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W8L-w0-H7S" secondAttribute="trailing" constant="-16" id="nFP-UJ-tEY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KRG-T1-AmG" secondAttribute="trailing" id="net-pF-TyH"/>
                             <constraint firstItem="W8L-w0-H7S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="236" id="ni9-Zd-7oa"/>
+                            <constraint firstItem="KRG-T1-AmG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nlS-yr-u6n"/>
+                            <constraint firstItem="KRG-T1-AmG" firstAttribute="leading" secondItem="W8L-w0-H7S" secondAttribute="trailing" constant="-414" id="nwb-aw-WVp"/>
                             <constraint firstAttribute="bottom" secondItem="KRG-T1-AmG" secondAttribute="bottom" constant="367" id="oqC-uh-ddH"/>
                             <constraint firstAttribute="trailing" secondItem="W8L-w0-H7S" secondAttribute="trailing" id="svN-Wz-HiJ"/>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uxp-Ea-IIW"/>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="top" secondItem="KRG-T1-AmG" secondAttribute="bottom" id="xn3-tK-skU"/>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="height" secondItem="KRG-T1-AmG" secondAttribute="height" id="xtk-rv-0Sf"/>
+                            <constraint firstItem="W8L-w0-H7S" firstAttribute="top" secondItem="KRG-T1-AmG" secondAttribute="bottom" id="zSV-cu-eUK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="44o-eW-roF"/>
                                 <exclude reference="5dS-9r-fbw"/>
+                                <exclude reference="7se-9I-pYc"/>
+                                <exclude reference="LbN-k6-cw6"/>
                                 <exclude reference="NNH-Fd-Uud"/>
                                 <exclude reference="Qpj-oC-vBy"/>
+                                <exclude reference="XON-BT-QgJ"/>
+                                <exclude reference="fiD-vB-epN"/>
+                                <exclude reference="net-pF-TyH"/>
+                                <exclude reference="nwb-aw-WVp"/>
                                 <exclude reference="oqC-uh-ddH"/>
+                                <exclude reference="1sN-xP-NL2"/>
+                                <exclude reference="1zI-oA-DdF"/>
+                                <exclude reference="7Xt-bC-r3N"/>
                                 <exclude reference="Jbc-i7-eFY"/>
+                                <exclude reference="SbW-jQ-FRj"/>
+                                <exclude reference="XFB-Un-vFe"/>
+                                <exclude reference="inG-Ag-98v"/>
+                                <exclude reference="nFP-UJ-tEY"/>
+                                <exclude reference="ni9-Zd-7oa"/>
+                                <exclude reference="svN-Wz-HiJ"/>
+                                <exclude reference="zSV-cu-eUK"/>
                                 <exclude reference="41G-Is-xJf"/>
+                                <exclude reference="8EV-eI-k03"/>
                             </mask>
                         </variation>
                     </view>

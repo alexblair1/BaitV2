@@ -18,13 +18,76 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self initializeLoginViewController];
     [self initializeRevealView];
     [self initializeNavigationImage];
     [self initializeLocationManager];
     [self fetchRequest];
     
     self.searchBar.delegate = self;
+
+//    [self performParseSave];
+//    [self performParseQuery];
 }
+
+//Parse Test
+//TODO: Remove before submitting next version
+
+//-(void)initializeLoginViewController{
+//    if (![PFUser currentUser]) {
+//        
+//        PFLogInViewController *logInController = [[PFLogInViewController alloc] init];
+//        [logInController setDelegate:self];
+//        
+//        PFSignUpViewController *signUpContoller = [[PFSignUpViewController alloc] init];
+//        [signUpContoller setDelegate:self];
+//        
+//        [logInController setSignUpController:signUpContoller];
+//        
+//        [self presentViewController:logInController animated:YES completion:nil];
+//        
+//    }
+//}
+//
+//-(void)performParseSave{
+//    PFObject *testNumber = [PFObject objectWithClassName:@"TestNumber"];
+//    testNumber[@"score"] = @1000;
+//    
+//    [testNumber saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+//        if (succeeded){
+//            NSLog(@"Object was saved");
+//        } else {
+//            //there was a problem. check the error
+//        }
+//    }];
+//}
+//
+//-(void)performParseQuery{
+//    PFQuery *parseQuery = [PFQuery queryWithClassName:@"TestNumber"];
+//    [parseQuery getObjectInBackgroundWithId:@"GvkAJMdUei" block:^(PFObject *testNumberTwo, NSError *error){
+//        NSLog(@"%@", testNumberTwo);
+//        int saveNumberTest = [[testNumberTwo objectForKey:@"score"] intValue];
+//        NSLog(@"SAVED NUMBER TEST: %d", saveNumberTest);
+//    }];
+//}
+//
+//- (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
+//    // Check if both fields are completed
+//    if (username && password && username.length != 0 && password.length != 0) {
+//        return YES; // Begin login process
+//    }
+//    
+//    [[[UIAlertView alloc] initWithTitle:@"Missing Information"
+//                                message:@"Make sure you fill out all of the information!"
+//                               delegate:nil
+//                      cancelButtonTitle:@"ok"
+//                      otherButtonTitles:nil] show];
+//    return NO; // Interrupt login process
+//}
+//
+//-(void)logInViewController:(PFLogInViewController * __nonnull)logInController didLogInUser:(PFUser * __nonnull)user{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 #pragma mark - Init Methods
 

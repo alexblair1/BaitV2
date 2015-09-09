@@ -12,6 +12,7 @@
 
 #import "AppDelegate.h"
 #import "MapTableViewController.h"
+#import "HoneyHole.h"
 
 
 @interface DataSource : NSObject <NSFetchedResultsControllerDelegate, CLLocationManagerDelegate>
@@ -22,7 +23,8 @@
 @property (nonatomic, strong) NSArray *mapItems;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSMutableArray *fetchResultItems;
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext; 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) CLRegion *region;
 
 -(void)localSearchRequestWithText:(NSString *)text withRegion:(MKCoordinateRegion)region completion:(void (^)(void))completionBlock;
 -(void)saveSelectedRegionWithName:(NSString *)name withDistance:(NSString *)distance withY:(float)yCoordinate withX:(float)xCoordinate withAddress:(NSString *)address;

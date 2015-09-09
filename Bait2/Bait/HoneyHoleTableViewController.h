@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreData/CoreData.h>
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 #import "SWRevealViewController.h"
 #import "DataSource.h"
 #import "HoneyHole.h"
 
-@interface HoneyHoleTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate>
+@interface HoneyHoleTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *revealButtonItem;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 

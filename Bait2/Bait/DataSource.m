@@ -36,6 +36,7 @@
     self.locationManagerDS.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [self.locationManagerDS setDistanceFilter:10000.0];
     [self.locationManagerDS startMonitoringSignificantLocationChanges];
+
 }
 
 #pragma mark - Data handling for MapTableViewController/SavedPoiTableViewController

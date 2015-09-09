@@ -20,6 +20,7 @@
 @property (nonatomic) MKCoordinateRegion regionSearch;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) MKMapItem *itemForRouteAndAlertView;
+@property (assign) BOOL didMove;
 
 @end
 
@@ -45,6 +46,7 @@
 -(void) initializeTableView{
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.bounds.size.width, 0.01f)];
 }
 
 -(void) initializeRevealView{
@@ -58,9 +60,7 @@
 }
 
 -(void) initializeMapViewAndLocationManager{
-    
-//    [DataSource sharedInstance].locationManagerDS.delegate = self;
-    
+        
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
     [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
@@ -96,6 +96,7 @@
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    if (self.didMove) return;
 
     [self.mapView removeAnnotations:self.mapView.annotations];
     [[DataSource sharedInstance].locationManagerDS stopUpdatingLocation];
@@ -127,6 +128,9 @@
         NSLog(@"!!!!!!!!!: %@", self.storedMapItemsForTableView);
         
         [self.tableView reloadData];
+        [[DataSource sharedInstance].locationManagerDS stopUpdatingLocation];
+        
+        self.didMove = YES;
         
     }];
 }
@@ -148,12 +152,13 @@
     }
     
     MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:self.pointAnnotation reuseIdentifier:@"detailViewController"];
-    
+   
     customPinView.pinColor = MKPinAnnotationColorRed;
     customPinView.animatesDrop = YES;
     customPinView.canShowCallout = YES;
-    
+
     return customPinView;
+
 }
 
 #pragma mark - Table View Delegate Methods

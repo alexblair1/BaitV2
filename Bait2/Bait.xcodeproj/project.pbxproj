@@ -34,6 +34,9 @@
 		ADD14C751B7FE9A000D0C186 /* HoneyHoleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD14C741B7FE9A000D0C186 /* HoneyHoleTableViewController.m */; };
 		ADD14C7B1B7FEDC600D0C186 /* HoneyHoleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD14C7A1B7FEDC600D0C186 /* HoneyHoleNavigationController.m */; };
 		ADD14C7E1B8018B100D0C186 /* HoneyHole.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD14C7D1B8018B100D0C186 /* HoneyHole.m */; };
+		ADD544921B9A2F3E008779F2 /* Region.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD544911B9A2F3E008779F2 /* Region.m */; };
+		ADD544941B9A3D0C008779F2 /* wildWaveFishing.gpx in Resources */ = {isa = PBXBuildFile; fileRef = ADD544931B9A3D0C008779F2 /* wildWaveFishing.gpx */; };
+		ADD544961B9FAA92008779F2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD544951B9FAA92008779F2 /* ParseUI.framework */; };
 		ADD666F41B7951D400C7B48B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD666F31B7951D400C7B48B /* Parse.framework */; };
 		ADD666F61B7951E800C7B48B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD666F51B7951E800C7B48B /* Bolts.framework */; };
 		ADD666F81B7951F500C7B48B /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD666F71B7951F500C7B48B /* ParseCrashReporting.framework */; };
@@ -110,6 +113,10 @@
 		ADD14C7A1B7FEDC600D0C186 /* HoneyHoleNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoneyHoleNavigationController.m; sourceTree = "<group>"; };
 		ADD14C7C1B8018B100D0C186 /* HoneyHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoneyHole.h; sourceTree = "<group>"; };
 		ADD14C7D1B8018B100D0C186 /* HoneyHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoneyHole.m; sourceTree = "<group>"; };
+		ADD544901B9A2F3E008779F2 /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Region.h; sourceTree = "<group>"; };
+		ADD544911B9A2F3E008779F2 /* Region.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Region.m; sourceTree = "<group>"; };
+		ADD544931B9A3D0C008779F2 /* wildWaveFishing.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = wildWaveFishing.gpx; sourceTree = "<group>"; };
+		ADD544951B9FAA92008779F2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		ADD666F31B7951D400C7B48B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		ADD666F51B7951E800C7B48B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		ADD666F71B7951F500C7B48B /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -154,6 +161,7 @@
 				ADD667041B79529000C7B48B /* StoreKit.framework in Frameworks */,
 				ADD667021B79528700C7B48B /* Security.framework in Frameworks */,
 				ADD667001B79527200C7B48B /* QuartzCore.framework in Frameworks */,
+				ADD544961B9FAA92008779F2 /* ParseUI.framework in Frameworks */,
 				AD0ED9991B715B0C005BBC98 /* CoreLocation.framework in Frameworks */,
 				ADD666FE1B79525600C7B48B /* CoreGraphics.framework in Frameworks */,
 				ADD666FC1B79525000C7B48B /* CFNetwork.framework in Frameworks */,
@@ -178,6 +186,7 @@
 		AD0ED9601B715136005BBC98 = {
 			isa = PBXGroup;
 			children = (
+				ADD544931B9A3D0C008779F2 /* wildWaveFishing.gpx */,
 				ADD667121B7A88A200C7B48B /* frameworks */,
 				AD0ED96B1B715136005BBC98 /* Bait */,
 				AD0ED9881B715136005BBC98 /* BaitTests */,
@@ -306,6 +315,8 @@
 		AD9376091B7E89900079775F /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				ADD544901B9A2F3E008779F2 /* Region.h */,
+				ADD544911B9A2F3E008779F2 /* Region.m */,
 				ADD14C7C1B8018B100D0C186 /* HoneyHole.h */,
 				ADD14C7D1B8018B100D0C186 /* HoneyHole.m */,
 			);
@@ -345,6 +356,7 @@
 				ADD667051B7952A100C7B48B /* SystemConfiguration.framework */,
 				ADD6670F1B7952EE00C7B48B /* Social.framework */,
 				ADD667071B7952B100C7B48B /* libstdc++.6.dylib */,
+				ADD544951B9FAA92008779F2 /* ParseUI.framework */,
 				ADD667091B7952BE00C7B48B /* libz.dylib */,
 				ADD6670B1B7952CF00C7B48B /* libsqlite3.dylib */,
 				ADD6670D1B7952E600C7B48B /* Accounts.framework */,
@@ -433,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD544941B9A3D0C008779F2 /* wildWaveFishing.gpx in Resources */,
 				AD3F9E9A1B753075009FD776 /* reveal-icon@2x.png in Resources */,
 				AD0ED97B1B715136005BBC98 /* Main.storyboard in Resources */,
 				ADD8DA8E1B82F06400B30F56 /* gear.png in Resources */,
@@ -494,6 +507,7 @@
 				ADD8DA861B829D2800B30F56 /* GearNavigationController.m in Sources */,
 				AD0ED9721B715136005BBC98 /* AppDelegate.m in Sources */,
 				ADD8DA831B82926000B30F56 /* GearViewController.m in Sources */,
+				ADD544921B9A2F3E008779F2 /* Region.m in Sources */,
 				AD0ED96F1B715136005BBC98 /* main.m in Sources */,
 				AD0ED9A41B72ABD5005BBC98 /* NavigationController.m in Sources */,
 			);
